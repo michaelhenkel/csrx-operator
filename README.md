@@ -107,8 +107,8 @@ status:
 
 [root@kvm1 ~]# kubectl exec -it csrx-1-pod bash
 root@csrx-1-pod> show configuration interfaces | display set
-set interfaces ge-0/0/0 unit 0 family inet address 2.0.0.252/32
-set interfaces ge-0/0/1 unit 0 family inet address 1.0.0.252/32
+set interfaces ge-0/0/0 unit 0 family inet address 2.0.0.252/24
+set interfaces ge-0/0/1 unit 0 family inet address 1.0.0.252/24
 ```
 ```
 
