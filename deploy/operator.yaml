@@ -16,7 +16,7 @@ spec:
       containers:
         - name: csrx-operator
           # Replace this with the built image name
-          image: REPLACE_IMAGE
+          image: docker.io/michaelhenkel/csrx-operator:latest
           command:
           - csrx-operator
           imagePullPolicy: Always
