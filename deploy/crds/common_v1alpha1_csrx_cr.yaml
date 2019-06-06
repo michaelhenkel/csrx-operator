@@ -8,8 +8,5 @@ spec:
   imagePullSecrets:
   - csrx
   networks:
-    - name: test5
-      namespace: bla
-    - name: test6
-      namespace: bla
-      interface: eth1
+    - name: net1
+    - name: net2
