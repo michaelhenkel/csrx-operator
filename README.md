@@ -41,11 +41,15 @@ kubectl apply -f networkattachment.yaml
 ## cSRX
 ### Create a secret for juniper docker repository
 ```
-kubectl create secret docker-registry csrx --docker-server=hub.juniper.net/security --docker-username=$YOUR_USERNAME --docker-password=$YOUR_PASSWORD
+kubectl create secret docker-registry csrx \
+  --docker-server=hub.juniper.net/security \
+  --docker-username=$YOUR_USERNAME \
+  --docker-password=$YOUR_PASSWORD
 ```
 ### Create cSRX Operator
 ```
-kubectl apply -f https://raw.githubusercontent.com/michaelhenkel/csrx-operator/master/deploy/create-csrx-operator.yaml
+kubectl apply -f \
+  https://raw.githubusercontent.com/michaelhenkel/csrx-operator/master/deploy/create-csrx-operator.yaml
 ```
 ### create a custom resource
 ```
@@ -66,5 +70,5 @@ EOF
 ```
 ### Apply custom resource
 ```
-kubectl apply -f common_v1alpha1_csrx_cr.yaml
+kubectl apply -f csrx_cr.yaml
 ```
