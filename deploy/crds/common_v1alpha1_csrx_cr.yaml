@@ -1,0 +1,15 @@
+apiVersion: common.contrail.com/v1alpha1
+kind: Csrx
+metadata:
+  name: csrx-1
+spec:
+  initImage: docker.io/michaelhenkel/csrx-init:latest
+  csrxImage: hub.juniper.net/security/csrx:18.1R1.9
+  imagePullSecrets:
+  - csrx
+  networks:
+    - name: test5
+      namespace: bla
+    - name: test6
+      namespace: bla
+      interface: eth1
